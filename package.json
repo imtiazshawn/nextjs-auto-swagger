@@ -1,0 +1,43 @@
+{
+  "name": "nextjs-auto-swagger",
+  "version": "1.0.1",
+  "description": "Automatic Swagger UI generation for Next.js 15+ App Router API routes",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "nextjs",
+    "swagger",
+    "openapi",
+    "api-documentation",
+    "app-router"
+  ],
+  "author": "Imtiaz Shawn",
+  "license": "MIT",
+  "peerDependencies": {
+    "next": ">=15.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "swagger-ui-dist": "^5.10.0"
+  }
+}
